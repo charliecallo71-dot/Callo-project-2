@@ -197,6 +197,67 @@ img { max-width: 100%; display: block; }
   font-size: 15px;
 }
 
+.compass-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.compass-card {
+  min-height: 300px;
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+.compass-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--gold);
+}
+.compass-card:last-child {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.compass-card:last-child::before {
+  background: var(--gold);
+}
+.compass-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.compass-card:last-child .compass-label {
+  color: var(--gold);
+}
+.compass-card h3 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 34px;
+}
+.compass-card:last-child h3 {
+  color: white;
+}
+.compass-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.compass-card:last-child p {
+  color: #edf3f9;
+}
+
 .program-section {
   margin-top: 20px;
   margin-bottom: 54px;
@@ -507,6 +568,7 @@ img { max-width: 100%; display: block; }
   .program-list, .levels-grid { grid-template-columns: 1fr; }
   .shs-intro, .track-grid { grid-template-columns: 1fr; }
   .basic-intro, .feature-grid { grid-template-columns: 1fr; }
+  .compass-grid { grid-template-columns: 1fr; }
   .quick-item { border-right: 0; border-bottom: 1px solid var(--line); }
   .about-grid, .content-grid { grid-template-columns: 1fr; }
   .about-badge { right: 12px; }
