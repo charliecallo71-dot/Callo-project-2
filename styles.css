@@ -152,6 +152,51 @@ img { max-width: 100%; display: block; }
 .card p { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
 .card-link { color: var(--blue); font-weight: 800; }
 
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.pillar-card {
+  min-height: 280px;
+  padding: 34px 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  text-align: center;
+  transition: .25s;
+}
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(18,58,120,.12);
+  border-color: var(--gold);
+}
+.pillar-number {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 3px solid var(--gold);
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+}
+.pillar-card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 21px;
+}
+.pillar-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .stats { background: var(--navy); color: white; padding: 52px 0; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; }
 .stat { border-right: 1px solid rgba(255,255,255,.15); }
@@ -203,6 +248,7 @@ img { max-width: 100%; display: block; }
   .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .hero { min-height: 540px; }
   .quick-grid, .card-grid { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: repeat(2, 1fr); }
   .quick-item { border-right: 0; border-bottom: 1px solid var(--line); }
   .about-grid, .content-grid { grid-template-columns: 1fr; }
   .about-badge { right: 12px; }
@@ -228,5 +274,6 @@ img { max-width: 100%; display: block; }
   .stats-grid { grid-template-columns: 1fr; }
   .stat { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); padding-bottom: 20px; }
   .footer-grid { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: 1fr; }
   .page-header h1 { font-size: 42px; }
 }
