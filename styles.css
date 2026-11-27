@@ -1,7 +1,7 @@
 :root {
-  --navy: #08264a;
-  --blue: #174a7e;
-  --gold: #e4ad32;
+  --navy: #123a78;
+  --blue: #1c4f96;
+  --gold: #f3cf58;
   --cream: #f7f4ec;
   --white: #ffffff;
   --ink: #172033;
@@ -46,17 +46,10 @@ img { max-width: 100%; display: block; }
 .nav-inner { height: 82px; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-mark {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--navy);
-  border: 3px solid var(--gold);
-  display: grid;
-  place-items: center;
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-weight: 700;
-  font-size: 19px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 64px;
 }
 .brand-name { color: var(--navy); font-weight: 800; line-height: 1.05; text-transform: uppercase; }
 .brand-name small { display: block; font-size: 10px; letter-spacing: 2px; margin-top: 5px; color: var(--muted); }
@@ -222,7 +215,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .container { width: min(100% - 28px, 1160px); }
   .brand-name { font-size: 13px; }
-  .brand-mark { width: 44px; height: 44px; }
+  .brand-mark { width: 54px; height: 54px; flex-basis: 54px; }
   .hero h1 { font-size: 42px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .quick-info { margin-top: 0; }
